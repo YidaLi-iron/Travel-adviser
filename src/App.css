@@ -48,10 +48,10 @@
 .footer {
   height: 6rem;
   width: 95%;
-  text-align: center;
-  border-top: 2px solid rgba(204, 204, 204, 0.658);
-  display: inline-block;
-  align-items: center;
+  /*text-align: center;*/
+  /*border-top: 2px solid rgba(204, 204, 204, 0.658);*/
+  /*display: inline-block;*/
+  /*align-items: center;*/
   padding: 0 1rem;
   opacity: 0.8;
   margin: 1.5rem;
@@ -64,7 +64,49 @@
   border: 1px solid white;
   height: 2rem;
   border-radius: 1rem;
-  padding: 0 1rem;
+  /*padding: 0 1rem;*/
   background: whitesmoke;
   color: black;
+  width: 75%;
+}
+
+/*input component*/
+.user-input-box {
+  border-top: 2px solid rgba(204, 204, 204, 0.658);
+  position: relative;
+  padding-top: 5px;
+}
+
+.user-input-box1{
+  display: inline-block;
+  position: absolute;
+  width: 50%;
+  left:0;
+}
+
+.user-input-box2{
+  position: absolute;
+  width: 50%;
+  left:50%;
+}
+
+.label1,.label2{
+  display: inline-block;
+  margin-left: 2.5%;
+  width: 20%;
+}
+
+.button{
+  padding-bottom: 5px;
+}
+
+.button button{
+  background-color: rgb(255,136,32);
+  color: white;
+  border: none;
+  margin-left: 87.5%;
+  border-radius: 1rem;
+  width: 11.5%;
+  height: 5vh;
+  font-size: 1.5vw;
 }
