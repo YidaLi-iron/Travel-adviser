@@ -69,7 +69,7 @@ function UserInput() {
                 console.error(err);
             });
 
-        setTimeout(()=>setisSubmit(true),10000)
+        setTimeout(()=>setisSubmit(true),5000)
 
     };
 

@@ -1,21 +1,24 @@
 .App {
   background: white;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /*display: flex;*/
+  position: relative;
+  /*flex-direction: column;*/
+  /*justify-content: space-between;*/
 }
 
 .header {
-  height: 6rem;
+  height: 10vh;
   width: 95%;
-  text-align: center;
+  /*text-align: center;*/
   border-bottom: 2px solid rgba(204, 204, 204, 0.658);
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
+  bottom: 0;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*padding: 0 1rem;*/
   opacity: 0.8;
-  margin: 1.5rem;
+  padding-top: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 .logo {
@@ -31,22 +34,24 @@
   margin-left: 1rem;
   font-family: poppins;
   position: absolute;
-  top: 5%;
-  left: 7%;
+  top: 2.5%;
+  left: 6%;
 }
 
 .subtitle {
   color: black;
-  font-weight: regular;
+  font-weight: normal;
   font-size: 14px;
   font-family: poppins;
   position: absolute;
-  top: 9%;
-  left: 8%;
+  top: 7%;
+  left: 7.5%;
 }
 
 .footer {
-  height: 6rem;
+  position: absolute;
+  bottom: 1%;
+  height: 85vh;
   width: 95%;
   /*text-align: center;*/
   /*border-top: 2px solid rgba(204, 204, 204, 0.658);*/
@@ -54,9 +59,16 @@
   /*align-items: center;*/
   padding: 0 1rem;
   opacity: 0.8;
-  margin: 1.5rem;
+  margin-left: 1.5rem;
   font-family: poppins;
   font-weight: bolder;
+}
+
+.user-input-form {
+  position: absolute;
+  width: 97%;
+  height: 20%;
+  bottom: 0;
 }
 
 .Input {
@@ -77,31 +89,31 @@
   padding-top: 5px;
 }
 
-.user-input-box1{
+.user-input-box1 {
   display: inline-block;
   position: absolute;
   width: 50%;
-  left:0;
+  left: 0;
 }
 
-.user-input-box2{
+.user-input-box2 {
   position: absolute;
   width: 50%;
-  left:50%;
+  left: 50%;
 }
 
-.label1,.label2{
+.label1, .label2 {
   display: inline-block;
   margin-left: 2.5%;
   width: 20%;
 }
 
-.button{
+.button {
   padding-bottom: 5px;
 }
 
-.button button{
-  background-color: rgb(255,136,32);
+.button button {
+  background-color: rgb(255, 136, 32);
   color: white;
   border: none;
   margin-left: 87.5%;
@@ -111,7 +123,52 @@
   font-size: 1.5vw;
 }
 
+.card-group{
+  padding-top: 3%;
+}
+
+.card-group div{
+  display: inline-block;
+  /*margin-left: 20px;*/
+  /*height: 100%;*/
+  /*background-color: black;*/
+}
 .card {
-  display: flex;
-  justify-content: flex-start;
+  width: 30%;
+  /*height: 900px;*/
+  position: relative;
+  margin-left: 3%;
+  /*background-color: black;*/
+  /*display: flex;*/
+  /*justify-content: flex-start;*/
+}
+
+.final{
+  background-color: rgb(255,230,179);
+
+}
+.card div{
+  display: block;
+}
+
+.item1 {
+  color: blue;
+  font-size: 18px;
+}
+
+.item2 {
+  font-size: 18px;
+}
+
+.item3{
+  color: #E57105;
+}
+
+.item4{
+  color: #095BFF;
+}
+
+.item {
+  position: absolute;
+  right: 5%;
 }
