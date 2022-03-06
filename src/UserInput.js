@@ -76,7 +76,6 @@ function UserInput() {
     return (
         <div className="footer">
             {isSubmit && <Analyze data={data} data1={data1} data2={data2} startingDate={startingDate} dest={dest1}/>}
-            <div>{data.latitude}</div>
             <form className="user-input-form" action='#'>
                 <div className="button">
                     <button onClick={handleFormSubmit}>submit</button>
