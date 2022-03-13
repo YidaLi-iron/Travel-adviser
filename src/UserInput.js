@@ -2,16 +2,10 @@ import './App.css';
 import React, {Component} from 'react';
 import {useState} from 'react';
 import Analyze from "./Analyze";
-import {dialogActionsClasses} from "@mui/material";
+import Loading from "./Loading";
 
 function UserInput() {
-    // state = {
-    //     currentLocation: '',
-    //     startingDate: '',
-    //     dest1: '',
-    //     dest2: '',
-    //     data: []
-    // };
+    // Set up place to store userinput and data return from weather API
     const [currentLocation, setCurrentLocation] = useState("");
     const [startingDate, setstartingDate] = useState("");
     const [dest1, setDest1] = useState("");
@@ -20,10 +14,13 @@ function UserInput() {
     const [data1, setData1] = useState({});
     const [data2, setData2] = useState({});
     const [isSubmit, setisSubmit] = useState(false);
+    const [isLoading, setisLoading] = useState(false);
 
-    // data = [];
-
+    // when click submit, call this function to request API.
     function handleFormSubmit() {
+        setisLoading(true) // show loading page when requesting data
+
+        // return weather data for the first destination
         let url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + dest1 + "?unitGroup=metric&key=E2BMHT6HB87MD893JXHUKR2N4&contentType=json"
         fetch(url, {
             "method": "GET",
@@ -38,7 +35,8 @@ function UserInput() {
             .catch(err => {
                 console.error(err);
             });
-
+        
+        // return weather data for the second destination
         let url1 = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + dest2 + "?unitGroup=metric&key=E2BMHT6HB87MD893JXHUKR2N4&contentType=json"
         fetch(url1, {
             "method": "GET",
@@ -53,7 +51,8 @@ function UserInput() {
             .catch(err => {
                 console.error(err);
             });
-
+        
+        // return weather data for the current location
         let url2 = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + currentLocation + "?unitGroup=metric&key=E2BMHT6HB87MD893JXHUKR2N4&contentType=json"
         fetch(url2, {
             "method": "GET",
@@ -68,13 +67,16 @@ function UserInput() {
             .catch(err => {
                 console.error(err);
             });
-
+        
+        // give API 5 seconds to return data
         setTimeout(()=>setisSubmit(true),5000)
+        setTimeout(()=>setisLoading(false),5000)
 
     };
 
     return (
         <div className="footer">
+            {isLoading && <Loading></Loading>}
             {isSubmit && <Analyze data={data} data1={data1} data2={data2} startingDate={startingDate} dest={dest1}/>}
             <form className="user-input-form" action='#'>
                 <div className="button">

@@ -172,3 +172,10 @@
   position: absolute;
   right: 5%;
 }
+
+.loading {
+  flex: 1;
+  margin-top:240;
+  justify-content: 'center';
+  align-items:'center';
+}
