@@ -130,7 +130,7 @@ function Analyze(props) {
         },
         headers: {
             'x-rapidapi-host': 'trueway-matrix.p.rapidapi.com',
-            'x-rapidapi-key': 'e6ea9101c7msh96ca46bd7b26a68p1f760ajsnc5078a983e4e'
+            'x-rapidapi-key': '5af58ad3e2msh6fa59a7265f9571p101d5djsn359c9e7638ec'
         }
     };
     axios.request(distance1).then(function (response) {
@@ -149,7 +149,7 @@ function Analyze(props) {
             <div className='card'>
                 <Card sx={{minWidth: 275}}>
                     <CardContent>
-                        <Typography sx={{fontSize: 14}} sx={{mb: 2}} color="text.secondary" gutterBottom>
+                        <Typography sx={{fontSize: 14, mb: 2}} color="text.secondary" gutterBottom>
                             DESTINATION: {data.address}
                         </Typography>
                         <Typography variant="h6" component="div" sx={{mb: 2}}>
@@ -190,7 +190,7 @@ function Analyze(props) {
             <div className='card'>
                 <Card sx={{minWidth: 275}}>
                     <CardContent>
-                        <Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom sx={{mb: 2}}>
+                        <Typography sx={{fontSize: 14, mb: 2}} color="text.secondary" gutterBottom >
                             DESTINATION: {data1.address}
                         </Typography>
                         <Typography variant="h6" component="div" sx={{mb: 2}}>
@@ -231,10 +231,10 @@ function Analyze(props) {
             <div className='card'>
                 <Card sx={{minWidth: 275}}>
                     <CardContent className="final">
-                        <Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom sx={{mb: 2}}>
+                        <Typography sx={{fontSize: 14, mb: 2}} color="text.secondary" gutterBottom >
                             FINAL RECOMMENDATION
                         </Typography>
-                        <Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom sx={{mb: 1}}>
+                        <Typography sx={{fontSize: 14, mb: 1}} color="text.secondary" gutterBottom >
                             DESTINATION: {locationDetail.finalDist}
                         </Typography>
                         <Typography variant="h6" component="div" sx={{mb: 2}}>

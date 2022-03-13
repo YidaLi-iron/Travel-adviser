@@ -92,7 +92,8 @@ function UserInput() {
                         <div>
                             <label className="label2" htmlFor="startingDate">Starting date</label>
                             <input id="startingDate" className="Input" value={startingDate}
-                                   onChange={(e) => setstartingDate(e.target.value)}/>
+                                   onChange={(e) => setstartingDate(e.target.value)}
+                                   placeholder="yyyy-mm-dd"/>
                         </div>
                     </div>
                     <div className="user-input-box2">
