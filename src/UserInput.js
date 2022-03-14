@@ -87,7 +87,8 @@ function UserInput() {
                         <div>
                             <label className="label1" htmlFor="currentLocation">Current location</label>
                             <input id="currentLocation" className="Input" value={currentLocation}
-                                   onChange={(e) => setCurrentLocation(e.target.value)}/>
+                                   onChange={(e) => setCurrentLocation(e.target.value)}
+                                   placeholder="city name. eg: Seattle"/>
                         </div>
                         <div>
                             <label className="label2" htmlFor="startingDate">Starting date</label>
@@ -100,12 +101,14 @@ function UserInput() {
                         <div>
                             <label className="label1" htmlFor="dest1">Destination1</label>
                             <input id="dest1" className="Input" value={dest1}
-                                   onChange={(e) => setDest1(e.target.value)}/>
+                                   onChange={(e) => setDest1(e.target.value)}
+                                   placeholder="city name. eg: Portland"/>
                         </div>
                         <div>
                             <label className="label2" htmlFor="dest2">Destination2</label>
                             <input id="dest2" className="Input" value={dest2}
-                                   onChange={(e) => setDest2(e.target.value)}/>
+                                   onChange={(e) => setDest2(e.target.value)}
+                                   placeholder="city name. eg: New York"/>
                         </div>
                     </div>
                 </div>

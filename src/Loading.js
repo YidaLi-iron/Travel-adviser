@@ -6,7 +6,7 @@ import { Spin } from 'antd';
 function Loading() {
     return (
       <div className="loading">
-        <div style={{ padding: "100px" }}>
+        <div style={{ padding: "100px" }} className="loading-box">
           <Spin size="large" />
           <h1 style={{ marginBottom: "2rem"}}>
             Loading
